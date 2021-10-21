@@ -1,0 +1,17 @@
+function truthCheck(collection, pre) {
+      let tr = collection
+    let ncoll = []
+    for (let i = 0;i<collection.length;i++){
+        if (collection[i].hasOwnProperty(pre)&&Boolean(collection[i][pre])===true){
+
+                ncoll.push(collection[i])
+
+        }
+    }
+        if (ncoll.toString()===tr.toString()){
+            ncoll = true
+        }else ncoll = false
+    return ncoll
+}
+
+truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex");

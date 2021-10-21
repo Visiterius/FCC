@@ -1,0 +1,9 @@
+function sumAll(arr) {
+    let bigDigit = Math.max(arr[0],arr[1])
+    let minDigit = Math.min(arr[0],arr[1])
+    let narr = [bigDigit]
+    for (let i = minDigit;i<bigDigit;i++){
+        narr.push(i)
+    }
+    return narr.reduce((p,c)=>p+c)
+}

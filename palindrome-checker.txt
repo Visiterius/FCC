@@ -1,0 +1,15 @@
+function palindrome(str) {
+    let test = str.split(' ')
+    let arrWord = []
+    for(let i =0;i<test.length;i++){
+        if(test[i].match(/[a-z0-9]/gi)!==null){
+            arrWord.push(test[i].match(/[a-z0-9]/gi).join(''))
+        }
+    }
+    if (arrWord.join('').toLowerCase()===arrWord.join('').split('').reverse().join('').toLowerCase()){
+        return true
+    }else{
+        return false
+    }
+}
+palindrome("eye");
